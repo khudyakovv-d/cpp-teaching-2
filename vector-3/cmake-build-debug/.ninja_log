@@ -1,0 +1,16 @@
+# ninja log v5
+3626	3647	1694755166012599334	lib/libgmock.a	951c3c7416cc9c22
+360	368	1694755162736651284	vector/libvector_t.a	3a115e5d5f68591d
+1	1205	1694755163572638021	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o	a217d22372732e53
+3585	3625	1694755165992599650	lib/libgtest.a	f7be157d7bff14d
+1	2020	1694755164384625142	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o	a84078be2744e540
+3647	3654	1694755166020599206	lib/libgmock_main.a	6d2e0f5021fda851
+2	3585	1694755165944600411	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	920146a930901dbd
+758	912	1694755497787631902	vector_3	caeb631d480711c
+1	758	1694755497635634071	CMakeFiles/vector_3.dir/tests.cpp.o	906c0c9d816265b6
+0	4	0	clean	fab40e3b1c262a9
+0	360	1694755162724651474	vector/CMakeFiles/vector_t.dir/Vector.cpp.o	b7d40a7464f39ff7
+3626	3634	1694755166000599524	lib/libgtest_main.a	4c9c86cbd2bde26a
+1	211	1694755497087641889	CMakeFiles/vector_3.dir/main.cpp.o	66db31ff11c669ac
+2	951	1694755163316642081	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	68d4be192c47c28d
+1	202	1694755539123044993	vector_3	a0814738bcd8a3cd
