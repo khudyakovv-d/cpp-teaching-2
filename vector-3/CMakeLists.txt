@@ -5,6 +5,9 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(vector_3 tests.cpp)
 
+#выключает copy elision
+add_compile_options(-fno-elide-constructors)
+
 add_subdirectory(vector)
 target_include_directories(vector_3 PRIVATE vector)
 

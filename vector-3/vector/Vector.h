@@ -5,6 +5,7 @@
 #ifndef VECTOR_2_VECTOR_H
 #define VECTOR_2_VECTOR_H
 
+#include <iostream>
 
 class Vector {
 private:
@@ -13,10 +14,15 @@ private:
 public:
     Vector();
     Vector(int size);
-    int size() const;
+    Vector(const Vector &vec);
+    //Vector(Vector &&vec) noexcept;
     ~Vector();
+    int size() const;
     int &operator[](int i);
+    int const &operator[](int i) const;
+    Vector &operator=(const Vector &vec);
 };
 
+Vector operator+(const Vector &vec1, const Vector &vec2);
 
 #endif //VECTOR_2_VECTOR_H
