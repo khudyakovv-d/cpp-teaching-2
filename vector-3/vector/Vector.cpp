@@ -10,7 +10,7 @@ Vector::Vector() {
     this->size_ = 0;
 }
 
-Vector::Vector(int size) : arr_(new int[size]), size_(10) {
+Vector::Vector(int size) : arr_(new int[size]), size_(size) {
     for (int i = 0; i < size; ++i) {
         arr_[i] = 0;
     }
@@ -27,7 +27,7 @@ Vector::~Vector() {
 }
 
 
-Vector::Vector(const Vector &vec) : arr_(new int[vec.size()]), size_(vec.size()) {
+Vector::Vector(const Vector &vec) : arr_(new int[vec.size()]), size_(vec.size()){
     for (int i = 0; i < vec.size(); i++) {
         this->arr_[i] = vec[i];
     }
@@ -55,13 +55,27 @@ Vector &Vector::operator=(const Vector &vec) {
     std::cout << "Copy " << &vec << " to " << this << std::endl;
 }
 
-/*Vector::Vector(Vector &&vec) noexcept {
+Vector::Vector(Vector &&vec) noexcept {
     this->arr_ = vec.arr_;
     this->size_ = vec.size_;
     vec.arr_ = nullptr;
     vec.size_ = 0;
     std::cout << "Create vector " << this << " with move " << &vec << "\n";
-}*/
+}
+
+Vector &Vector::operator=(Vector &&vec) {
+    delete[] this->arr_;
+
+    this->arr_ = vec.arr_;
+    this->size_ = vec.size_;
+
+    vec.arr_ = nullptr;
+    vec.size_ = 0;
+
+    std::cout << "Move " << &vec << " to " << this << std::endl;
+
+    return *this;
+}
 
 Vector operator+(const Vector &vec1, const Vector &vec2) {
     if (vec1.size() != vec2.size()) {

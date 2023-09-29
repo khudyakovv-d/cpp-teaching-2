@@ -14,13 +14,14 @@ private:
 public:
     Vector();
     Vector(int size);
-    Vector(const Vector &vec);
-    //Vector(Vector &&vec) noexcept;
+    Vector(const Vector &vec) ;
+    Vector(Vector &&vec) noexcept;
     ~Vector();
     int size() const;
     int &operator[](int i);
     int const &operator[](int i) const;
     Vector &operator=(const Vector &vec);
+    Vector &operator=(Vector &&vec);
 };
 
 Vector operator+(const Vector &vec1, const Vector &vec2);
